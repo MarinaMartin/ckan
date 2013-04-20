@@ -3,6 +3,8 @@ import logging
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as tk
 
+'''To install this plugin, add example_idatasetform to the plugins line of development.ini, then restart.'''
+
 
 def create_country_codes():
     '''Create country_codes vocab and tags, if they don't exist already.
