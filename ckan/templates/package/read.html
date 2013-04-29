@@ -42,6 +42,10 @@
     {% snippet "package/snippets/tags.html", tags=pkg.tags %}
   {% endblock %}
 
+  {% block package_related_resources %}
+    {% snippet "package/snippets/related_resources.html", pkg=pkg %}
+  {% endblock %}
+
   {% block package_additional_info %}
     {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}
   {% endblock %}
