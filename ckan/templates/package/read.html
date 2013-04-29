@@ -42,8 +42,22 @@
     {% snippet "package/snippets/tags.html", tags=pkg.tags %}
   {% endblock %}
 
-  {% block package_related_resources %}
-    {% snippet "package/snippets/related_resources.html", pkg=pkg %}
+  {% block primary_content_inner %}
+    <section class="module-content">
+      <h2 class="hide-heading">{% block page_heading %}{{ _('Related Media for {dataset}').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h2>
+      {% block related_list %}
+      {% if c.pkg.related %}
+        {% snippet "related/snippets/related_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
+      {% else %}
+      <p class="empty">{{ _('No related items') }}</p>
+      {% endif %}
+      {% endblock %}
+      {% block form_actions %}
+      <div class="form-actions">
+        {% link_for _('Add Related Item'), controller='related', action='new', id=pkg.name, class_='btn btn-primary' %}
+      </div>
+      {% endblock %}
+    </section>
   {% endblock %}
 
   {% block package_additional_info %}
