@@ -58,6 +58,20 @@
     </span>
     {% endcall %}
     {% endblock %}
+
+{{ form.input('last_modified', id='field-last-modified', label=_('Last Update'), placeholder=_('eg. 2012-06-05'), value=data.last_modified, error=errors.last_modified, classes=[]) }}
+
+    {% block basic_fields_spatial %}
+    {{ form.input('spatial', id='field-spatial', label=_('Spatial'), placeholder=_('eg. Lincoln, Nebraska'), value=data.spatial, error=errors.spatial, classes=['control-full']) }}
+    {% endblock %}
+
+    {% block basic_fields_temporal %}
+    {{ form.input('temporal', id='field-temporal', label=_('Temporal'), placeholder=_('eg. 2000-01-15 00:45:00,2010-01-15 00:06:00'), value=data.temporal, error=errors.temporal, classes=['control-full']) }}
+    {% endblock %}
+
+{{ form.input('size', id='field-size', label=_('File Size'), placeholder=_('eg. 1024'), value=data.size, error=errors.size, classes=[]) }}
+{{ form.input('created', id='field-created', label=_('Release Date'), placeholder=_('eg. 2012-06-05'), value=data.created, error=errors.created, classes=[]) }}
+
   {% endblock %}
 
   {% block metadata_fields %}

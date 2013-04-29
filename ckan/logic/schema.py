@@ -285,7 +285,7 @@ def default_group_schema():
 
 def group_form_schema():
     schema = default_group_schema()
-    #schema['extras_validation'] = [duplicate_extras_key, ignore]
+    #schema['__extras_validation'] = [duplicate_extras_key, ignore]
     schema['packages'] = {
         "name": [not_empty, unicode],
         "title": [ignore_missing],

@@ -866,6 +866,10 @@ class IFacets(Interface):
 
     def dataset_facets(self, facets_dict, package_type):
         ''' Update the facets_dict and return it. '''
+	facets_dict = {'groups': _('Groupons'),
+                       'tags': _('Tags'),
+                       'res_format': _('Formats'),
+                       'license': _('Licence'), }
         return facets_dict
 
     def group_facets(self, facets_dict, group_type, package_type):
