@@ -42,7 +42,7 @@
     {% snippet "package/snippets/tags.html", tags=pkg.tags %}
   {% endblock %}
 
-  {% block primary_content_inner %}
+  {% block primary_content_inner2 %}
     <section class="module-content">
       <h2 class="hide-heading">{% block page_heading %}{{ _('Related Media for {dataset}').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h2>
       {% block related_list %}
