@@ -43,18 +43,17 @@
   {% endblock %}
   
   {% block developer_resources %}
+  <section id="dataset-data_dictionary" class="resources module-content">
+  <h3>Developer &amp; Researcher Resources</h3>
     {% if pkg.get('dataDictionary') %}
-
-      <section id="dataset-data_dictionary" class="resources module-content">
-      <h3>Developer &amp; Researcher Resources</h3>
-      <p><strong>Data Dictionary</strong>: {{ pkg.dataDictionary }}</p>
-      </section>
+      <p><strong>Data Dictionary</strong>: {{ pkg.dataDictionary }}</p>  
     {% endif %}
+    
     
     {% if c.pkg.related %}
       {% snippet "related/snippets/related_API_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
     {% endif %}
-    
+    </section>
   {% endblock %}
 
   {% block primary_content_inner2 %}
