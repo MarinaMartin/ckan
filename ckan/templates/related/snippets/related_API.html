@@ -11,7 +11,7 @@ Example:
 
 #}
 {%- if related.type == 'api' -%}
-<li class="related-item media-item media media-vertical{% if first %} first{% endif %}{% if last %} last{% endif %}" data-module="related-item">
+<li data-module="related-api">
   <strong>API Endpoint:</strong> 
     <a href="{{ related.url }}">
     {{ related.url }}
