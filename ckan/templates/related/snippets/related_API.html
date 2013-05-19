@@ -1,0 +1,29 @@
+{#
+Displays a single related item.
+
+related - The related item dict.
+pkg_id  - The id of the owner package. If present the edit button will be
+          displayed.
+
+Example:
+
+
+
+#}
+{%- if related.type == 'api' -%}
+<li class="related-item media-item media media-vertical{% if first %} first{% endif %}{% if last %} last{% endif %}" data-module="related-item">
+  <a class="media-image" href="{{ related.url }}">
+    {{ related.title }}
+  </a><br />
+    {% if related.description %}
+      <div class="prose">{{ h.render_markdown(related.description) }}</div>
+    {% else %}
+      <div class="prose">{{ _('API Endpoint') }}</div>
+    {% endif %}
+
+    {% if pkg_id %}
+      {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
+    {% endif %}
+  </div>
+</li>
+{%- endif -%}

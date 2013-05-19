@@ -50,6 +50,11 @@
       <p><strong>Data Dictionary</strong>: {{ pkg.dataDictionary }}</p>
       </section>
     {% endif %}
+    
+    {% if c.pkg.related %}
+      {% snippet "related/snippets/related_API_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
+    {% endif %}
+    
   {% endblock %}
 
   {% block primary_content_inner2 %}
