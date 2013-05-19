@@ -10,6 +10,7 @@ Example:
 
 
 #}
+{%- unless related.type == 'api' -%}
 {% set placeholder_map = {
 'application':'/base/images/placeholder-application.png'
 } %}
@@ -43,3 +44,4 @@ Example:
     {% endif %}
   </div>
 </li>
+{%- end unless -%}
