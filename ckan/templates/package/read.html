@@ -41,6 +41,16 @@
   {% block package_resources %}
     {% snippet "package/snippets/resources_list.html", pkg=pkg, resources=pkg.resources %}
   {% endblock %}
+  
+  {% block developer_resources %}
+    {% if pkg.get('dataDictionary') %}
+
+      <section id="dataset-data_dictionary" class="resources module-content">
+      <h3>Developer &amp; Researcher Resources</h3>
+      <p><strong>Data Dictionary</strong>: {{ pkg.dataDictionary }}</p>
+      </section>
+    {% endif %}
+  {% endblock %}
 
   {% block primary_content_inner2 %}
     <section class="module-content">
