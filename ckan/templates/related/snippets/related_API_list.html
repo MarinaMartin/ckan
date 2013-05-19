@@ -13,7 +13,7 @@ Example:
   {% snippet "related/snippets/related_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
 
 #}
-<ul class="media-grid">
+<ul>
   {% for related in related_items %}
     {% set first = loop.index0 % 3 == 0 %}
     {% set last  = loop.index0 % 3 == 2 %}
