@@ -16,13 +16,14 @@ Example:
     <a href="{{ related.url }}">
     {{ related.url }}
   </a> 
+  {% if pkg_id %}
+    {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
+  {% endif %}</p>
     {% if related.description %}
       {{ h.render_markdown(related.description) }}
     {% endif %}
 
-    {% if pkg_id %}
-      {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
-    {% endif %}</p>
+    
 
 </li>
 {%- endif -%}
