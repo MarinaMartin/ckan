@@ -12,10 +12,10 @@ Example:
 #}
 {%- if related.type == 'api' -%}
 <li data-module="related-api">
-  <strong>API Endpoint:</strong> 
+  <p><strong>API Endpoint:</strong> 
     <a href="{{ related.url }}">
     {{ related.url }}
-  </a>
+  </a></p>
     {% if related.description %}
       {{ h.render_markdown(related.description) }}
     {% endif %}
