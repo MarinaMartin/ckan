@@ -61,7 +61,7 @@
       <h3>{% block page_heading2 %}{{ _('These Data Fuel:').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h3>
       {% block related_list %}
       {% if c.pkg.related %}
-        {% snippet "related/snippets/related_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
+        {% snippet "related/snippets/package_related_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
       {% else %}
       <p class="empty">{{ _('No related items') }}</p>
       {% endif %}
