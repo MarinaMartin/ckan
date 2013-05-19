@@ -85,5 +85,9 @@
   {% block package_license %}
     {% snippet "snippets/license.html", pkg_dict=pkg %}
   {% endblock %}
+  
+  {% block package_stackexchange %}
+    {% snippet "snippets/stackexchange.html" %}
+  {% endblock %}
 
 {% endblock %}
