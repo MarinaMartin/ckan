@@ -87,7 +87,7 @@
   {% endblock %}
   
   {% block package_steward %}
-    {% snippet "snippets/steward.html" %}
+    {% snippet "snippets/steward.html", pkg_dict=pkg %}
   {% endblock %}
   
   {% block package_license %}
