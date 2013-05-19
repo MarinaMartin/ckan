@@ -12,7 +12,7 @@
     {% else %}
       <span class="empty">{{ _('No description for this resource') }}</span>
     {% endif %}
-  </p>
+  
   {% block resource_item_explore %}
   <a href="{{ url }}">
     <i class="icon-bar-chart"></i>
@@ -22,6 +22,7 @@
     <i class="icon-download"></i>
     {{ _('Download') }}
   </a>
+  </p>
   <!--
   <div class="dropdown btn-group">
     <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
