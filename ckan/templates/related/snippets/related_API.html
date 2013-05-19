@@ -12,13 +12,12 @@ Example:
 #}
 {%- if related.type == 'api' -%}
 <li class="related-item media-item media media-vertical{% if first %} first{% endif %}{% if last %} last{% endif %}" data-module="related-item">
-  <a class="media-image" href="{{ related.url }}">
+  <strong>API Endpoint:</strong> 
+    <a class="media-image" href="{{ related.url }}">
     {{ related.title }}
-  </a><br />
+  </a>
     {% if related.description %}
       <div class="prose">{{ h.render_markdown(related.description) }}</div>
-    {% else %}
-      <div class="prose">{{ _('API Endpoint') }}</div>
     {% endif %}
 
     {% if pkg_id %}
