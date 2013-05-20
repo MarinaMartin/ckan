@@ -1,16 +1,15 @@
     <section class="module module-narrow module-shallow license">
     <h2 class="module-heading"><i class="icon-medium icon-lock"></i> {{ _('Data Steward') }}</h2>
       <p class="module-content">
-{% if pkg_dict.maintainer %}
-These data are maintained by 
+{% if pkg_dict.maintainer %} 
   {% if pkg_dict.maintainer_email %}
     <a href="mailto:{{ pkg_dict.maintainer_email }}">
   {% endif %}
-  {{ pkg_dict.maintainer }}
+  {{ pkg_dict.maintainer }} 
   {% if pkg_dict.maintainer_email %}
     </a>
   {% endif %}
-  .
+  maintains these data.
 {% elif text_only %}
   {{ _('No Maintainer Provided') }}
 {% endif %}
