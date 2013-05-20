@@ -10,7 +10,7 @@ Example:
 
 
 #}
-{% if related.type != 'api' %}
+{% if related.type != 'api' && related.type != 'idea' %}
 {% set placeholder_map = {
 'application':'/base/images/placeholder-application.png'
 } %}
