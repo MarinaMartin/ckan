@@ -59,6 +59,7 @@
   {% block primary_content_inner2 %}
     
       {% block related_list %}
+      {% link_for _('Add Related Item'), controller='related', action='new', id=pkg.name, class_='btn btn-primary' %}<br />
       {% if c.pkg.related %}
       <section class="module-content">
         <h3>{% block page_heading2 %}{{ _('These Data Fuel:').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h3>
@@ -66,11 +67,7 @@
       </section>
       {% endif %}
       {% endblock %}
-      {% block form_actions %}
 
-        {% link_for _('Add Related Item'), controller='related', action='new', id=pkg.name, class_='btn btn-primary' %}
-
-      {% endblock %}
     
   {% endblock %}
   
