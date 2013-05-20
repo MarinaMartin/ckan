@@ -12,14 +12,13 @@ Example:
 #}
 {%- if related.type == 'idea' -%}
 <li data-module="related-idea">
-  <p><strong>Ideal:</strong> 
-    
+
     {% if related.description %}
       <div class="prose">{{ h.render_markdown(related.description) }}</div>
     {% endif %}
     {% if pkg_id %}
       {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
-    {% endif %}</p>
+    {% endif %}
     
 
 </li>
