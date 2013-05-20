@@ -13,7 +13,7 @@ Example:
 {%- if related.type == 'idea' -%}
 <li data-module="related-idea">
     {% if related.description %}
-      <div class="prose"><i class="icon-lightbulb"></i>{{ h.render_markdown(related.description) }}</div>
+      <div class="prose"><i class="icon-lightbulb"></i>{{ related.description }}</div>
     {% endif %}
 </li>
 {%- endif -%}
