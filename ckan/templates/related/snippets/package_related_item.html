@@ -10,7 +10,8 @@ Example:
 
 
 #}
-{% if related.type != 'api' && related.type != 'idea' %}
+{% if related.type != 'api' %}
+{% if related.type != 'idea' %}
 {% set placeholder_map = {
 'application':'/base/images/placeholder-application.png'
 } %}
@@ -44,4 +45,5 @@ Example:
     {% endif %}
   </div>
 </li>
+{% endif %}
 {% endif %}
