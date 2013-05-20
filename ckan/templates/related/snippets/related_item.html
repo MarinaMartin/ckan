@@ -39,9 +39,9 @@ Example:
       <p class="empty">{{ _('This item has no description') }}</p>
     {% endif %}
     <a class="btn btn-small btn-primary" href="{{ related.url }}" target="_blank">{{ _('Go to {type}').format(type=related.type|replace('_', ' ')|title) }}</a>
-    {% if pkg_id %}{% if c.userobj.sysadmin %}
+    {% if pkg_id %}
       {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
-    {% endif %}{% endif %}
+    {% endif %}
   </div>
 </li>
 
