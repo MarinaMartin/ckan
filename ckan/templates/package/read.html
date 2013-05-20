@@ -44,7 +44,7 @@
   
   {% block developer_resources %}
   <section id="dataset-data_dictionary" class="resources module-content">
-  <h3>Developer &amp; Researcher Resources</h3>
+  <h3>Developers</h3>
     {% if pkg.get('dataDictionary') %}
       <p><strong>Data Dictionary</strong>: {{ pkg.dataDictionary }}</p>  
     {% endif %}
@@ -63,7 +63,7 @@
       {% if c.pkg.related %}
       <section class="module-content">
       
-        <h3>{% block page_heading2 %}{{ _('These Data Fuel:').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h3>
+        <h3>{% block page_heading2 %}{{ _('Applications and Tools:').format(dataset=h.dataset_display_name(c.pkg)) }}{% endblock %}</h3>
         {% snippet "related/snippets/package_related_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
       </section>
       {% endif %}
