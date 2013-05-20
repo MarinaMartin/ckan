@@ -73,6 +73,15 @@
       {% endblock %}
     
   {% endblock %}
+  
+  {% block ideas %}
+  <section id="dataset-ideas" class="resources module-content">
+    {% if c.pkg.related %}
+    <h3>Ideas for Using These Data</h3>
+      {% snippet "related/snippets/related_idea_list.html", related_items=c.pkg.related, pkg_id=c.pkg.name %}
+    {% endif %}
+    </section>
+  {% endblock %}
 
   {% block package_additional_info %}
     {% snippet "package/snippets/additional_info.html", pkg_dict=pkg %}

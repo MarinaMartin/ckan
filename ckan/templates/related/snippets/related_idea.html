@@ -1,0 +1,26 @@
+{#
+Displays a single related item.
+
+related - The related item dict.
+pkg_id  - The id of the owner package. If present the edit button will be
+          displayed.
+
+Example:
+
+
+
+#}
+{%- if related.type == 'idea' -%}
+<li data-module="related-idea">
+  <p><strong>Ideal:</strong> 
+    
+    {% if related.description %}
+      <div class="prose">{{ h.render_markdown(related.description) }}</div>
+    {% endif %}
+    {% if pkg_id %}
+      {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
+    {% endif %}</p>
+    
+
+</li>
+{%- endif -%}
