@@ -17,7 +17,9 @@ Example:
       <div class="prose">{{ h.render_markdown(related.description) }}</div>
     {% endif %}
     {% if pkg_id %}
+      {% if c.userobj.sysadmin %}
       {{ h.nav_link(_('Edit'), controller='related', action='edit', id=pkg_id, related_id=related.id, class_='btn btn-small') }}
+      {% endif %}
     {% endif %}
     
 
