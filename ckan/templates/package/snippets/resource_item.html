@@ -14,33 +14,33 @@
     {% endif %}
   
   {% block resource_item_explore %}
-  <a href="{{ url }}">
-    <i class="icon-bar-chart"></i>
-    {{ _('Preview') }}
-  </a>
-  <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
-    <i class="icon-download"></i>
-    {{ _('Download') }}
-  </a>
+  
+  
   </p>
-  <!--
+
   <div class="dropdown btn-group">
     <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
       <i class="icon-share-alt"></i>
-      {{ _('Explore') }}
+      {{ _('Download') }}
       <span class="caret"></span>
     </a>
     <ul class="dropdown-menu">
       {% block resource_item_explore_links %}
       <li>
-        
+      <a href="{{ url }}">
+        <i class="icon-bar-chart"></i>
+        {{ _('Preview') }}
+      </a>  
       </li>
       <li>
-        
+      <a href="{{ res.url }}" class="resource-url-analytics" target="_blank">
+        <i class="icon-download"></i>
+        {{ _('Download') }}
+      </a>  
       </li>
       
       {% endblock %}
     </ul>
-  </div> -->
+  </div> 
   {% endblock %}
 </li>
