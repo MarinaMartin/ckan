@@ -1,55 +1,46 @@
+<!-- Header Background Color, Image, or Visualization
+================================================== -->
+
 <div class="next-header">
-	</div>
+</div>
+
 
 <!-- Navigation & Search
 	================================================== -->
 
-	<div class="container">
-		<div class="next-top">
-			<div class="sixteen columns">
-				<div class="ten columns alpha">
-				<ul class="next-nav">
-					<li class="next-us-flag">Official US Government Website</li>
-					<li class="next-primary"><a href="#">Data.Gov</a></li>
-					<li><a href="#">Agencies</a></li>
-					<li><a href="#">Companies</a></li>
-					<li><a href="#">For Developers</a></li>
-					<li><a href="#">Strategy</a></li>
-					<li><a href="#">About</a></li>
-				</ul><!-- nav -->
-				</div>
-				<div class="six columns omega">
-				<div class="next-search">
-					{% block header_site_search %}
-				<a href="#"><img src="http://gsa.github.io/datagov-design/assets/search-small.png"></a>
-<!--        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
-          <div class="field">
-            <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
-            <input id="field-sitewide-search" name="q" placeholder="{{ _('Search') }}" type="text" />
-            <button class="btn-search" type="submit">{{ _('Search') }}</button>
-          </div>
-        </form>
+<div class="container">
+
+	<div class="next-top">
+
+		<div class="navigation">
+			<ul class="next-nav">
+				<li class="next-us-flag">Official US Government Website</li>
+				<li class="next-primary"><a href="#">Data.Gov</a></li>
+				<li><a href="http://alpha.data.gov">Highlights</a></li>
+			</ul><!-- nav -->
+		</div>
+
+		<div class="next-search">
+			<a href="#"><img src="http://gsa.github.io/datagov-design/assets/search-small.png"></a>
+			<!--        <form class="section site-search simple-input" action="{% url_for controller='package', action='search' %}" method="get">
+              <div class="field">
+                <label for="field-sitewide-search">{{ _('Search Datasets') }}</label>
+                <input id="field-sitewide-search" name="q" placeholder="{{ _('Search') }}" type="text" />
+                <button class="btn-search" type="submit">{{ _('Search') }}</button>
+              </div>
+            </form>
+      -->
+		</div>
+
+</div> <!-- top -->
+	
+<!-- CKAN Content
+================================================== -->
+
+<div class="next-content">
+
+	<div class="sixteen columns">
+
+<!--
+<div class="container">
 -->
-      {% endblock %}
-				</div>
-				</div>
-
-			</div> <!-- sixteen columns -->
-
-			<div class="sixteen columns next-title">
-				<h1><span class="next-tag">
-{% if c.fields_grouped %}
-{% for field in c.fields_grouped %}
-{% set search_facets_items = c.search_facets.get(field)['items'] %}
-
-{% if c.facet_titles.get(field) == 'Keywords' %}
-{% for value in c.fields_grouped[field] %}
-  {{ h.list_dict_filter(search_facets_items , 'name', 'display_name', value) }}
-{% endfor %}
-{% endif %}
-{% endfor %}
-{% endif %}
-</span> List of Elementary Schools</h1>
-			</div>
-
-		</div> <!-- top -->
